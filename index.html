@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Управление лентой WS2812</title>
+</head>
+<body>
+    <h1>Выберите эффект:</h1>
+    <form action="/effect" method="post">
+        <select name="effect">
+            {% for key, value in effects.items() %}
+                <option value="{{ key }}">{{ value }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Применить">
+    </form>
+</body>
+</html>
